@@ -1,0 +1,117 @@
+/* Thiết lập chung cho toàn bộ trang */
+body {
+    font-family: "Times New Roman", Times, serif; /* Sử dụng font giống trong ảnh */
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Nền trắng */
+}
+
+/* 1. Kiểu dáng cho Tiêu đề (Header) */
+.main-header {
+    background-color: yellow;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-header h1 {
+    color: blue;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* 2. Thiết lập bố cục 3 cột */
+.container {
+    display: flex; /* Sử dụng Flexbox để tạo layout 3 cột */
+    width: 95%;   /* Chiếm 95% chiều rộng trang */
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách với header */
+}
+
+/* 3. Cột bên trái: Menu */
+.left-menu {
+    flex-basis: 150px; /* Chiều rộng cố định cho menu */
+    padding-right: 15px;
+    
+    /* THAY ĐỔI: Đổi đường kẻ ngăn cách sang màu xanh */
+    border-right: 3px solid green; 
+}
+
+.left-menu h2 {
+    font-size: 1em; /* 1em = kích thước font cơ bản */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 0;
+}
+
+.left-menu ul {
+    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+    padding-left: 0;
+}
+
+.left-menu ul li a {
+    color: blue;
+    text-decoration: underline;
+    line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+}
+
+/* 4. Cột ở giữa: Nội dung chính */
+.main-content {
+    flex-grow: 1; /* Cho phép cột này tự mở rộng để lấp đầy không gian */
+    padding: 0 15px; /* Tạo khoảng cách 2 bên */
+}
+
+.post {
+    margin-bottom: 25px; /* Khoảng cách giữa các bài đăng */
+}
+
+.post h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.post .date {
+    font-style: italic;
+    color: #333; /* Màu xám đậm */
+    margin: 0 0 10px 0;
+}
+
+.post p {
+    margin: 5px 0;
+}
+
+/* Kiểu dáng cho phần footer "Contact me..." */
+.main-content footer {
+    text-align: center; /* Căn giữa */
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+/* 5. Cột bên phải: Last posts */
+.right-sidebar {
+    flex-basis: 200px; /* Chiều rộng cố định */
+    border: 2px dotted green; /* Viền chấm màu xanh lá */
+    padding: 10px;
+    height: fit-content; /* Chỉ cao vừa đủ nội dung bên trong */
+}
+
+.right-sidebar h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.right-sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.right-sidebar ul li a {
+    color: blue;
+    text-decoration: underline;
+    line-height: 1.5;
+}
+
+/* Đảm bảo TẤT CẢ các link (kể cả đã click) đều màu xanh */
+a, a:visited {
+    color: blue;
+}

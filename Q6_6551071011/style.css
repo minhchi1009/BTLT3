@@ -1,0 +1,211 @@
+/* --- CÀI ĐẶT CHUNG --- */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Màu nền xám nhạt bên ngoài */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover {
+    color: #007bff;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4, p {
+    margin: 0 0 10px 0;
+}
+
+/* Container chính, căn giữa trang */
+.container {
+    width: 980px; /* Chiều rộng cố định như trong ảnh */
+    margin: 10px auto;
+    background-color: #ffffff; /* Nền trắng cho nội dung */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- 1. HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #000;
+}
+.logo-info h1 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+.logo-info .slogan {
+    font-weight: bold;
+    font-style: italic;
+    color: #555;
+}
+.logo-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+.header-images {
+    display: flex;
+    gap: 5px;
+}
+.header-images img {
+    border: 1px solid #ccc;
+}
+
+/* --- 2. THANH ĐIỀU HƯỚNG CHÍNH --- */
+.main-nav {
+    background-color: #000000;
+}
+.main-nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+.main-nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+}
+.main-nav ul li a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* --- 3. KHU VỰC NỘI DUNG CHÍNH --- */
+.main-content-area {
+    display: flex;
+    padding: 15px;
+    gap: 15px; /* Khoảng cách giữa sidebar và main */
+}
+
+/* 3.1. SIDEBAR TRÁI */
+.sidebar {
+    flex-basis: 240px; /* Chiều rộng cố định cho sidebar */
+    flex-shrink: 0;
+}
+.sidebar h3 {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sidebar ul ul {
+    padding-left: 20px; /* Thụt vào cho danh mục con */
+}
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+.sidebar ul li a {
+    font-size: 13px;
+}
+.sidebar ul li a.category-title {
+    font-weight: bold;
+    color: #007bff;
+    /* Thêm hình bullet point (dấu chấm) */
+    list-style-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><circle cx="4" cy="4" r="3" fill="%23007bff"/></svg>');
+    display: list-item;
+    list-style-position: inside;
+}
+
+/* 3.2. NỘI DUNG CHÍNH */
+.main-content {
+    flex-grow: 1; /* Tự động lấp đầy không gian còn lại */
+}
+
+/* Banner quảng cáo */
+.promo-banners {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.promo-banners .side-banner {
+    width: 180px;
+    height: 180px;
+}
+.promo-banners .main-banner {
+    width: 340px; /* (700px - 180 - 180 - 10px gap) / 3 ? No, let's fix width */
+    height: 180px;
+flex-grow: 1; /* Cho banner chính lớn hơn */
+}
+
+/* Lưới sản phẩm */
+.product-grid h2 {
+    font-size: 16px;
+    color: #007bff;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.product-card {
+    flex-basis: 32%; /* Chia 3 cột, có trừ hao khoảng cách */
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-card h4 {
+    font-size: 13px;
+    color: #333;
+    height: 30px; /* Giữ chiều cao đồng đều */
+    overflow: hidden;
+}
+.product-card .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d00; /* Màu đỏ cho giá */
+}
+.product-card .stars {
+    width: 80px;
+    height: 16px;
+}
+
+/* --- 4. FOOTER --- */
+footer {
+    border-top: 2px solid #000;
+    padding-top: 15px;
+    background-color: #f9f9f9;
+}
+.footer-nav {
+    background-color: #eee;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.footer-nav ul li a {
+    font-weight: bold;
+    font-size: 12px;
+}
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    padding-bottom: 15px;
+}

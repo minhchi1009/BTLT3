@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Biểu mẫu</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <form action="" method="get">
+        <h2>Task 4 - Thử nghiệm với GET</h2>
+        
+        <div>
+            <label for="name_get">Name:</label>
+            <input type="text" id="name_get" name="username" required>
+        </div>
+
+        <div>
+            <label>Age:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="age" value="<18"> < 18</label>
+                <label><input type="radio" name="age" value="19-35" checked> 19-35</label>
+                <label><input type="radio" name="age" value="36-48"> 36-48</label>
+                <label><input type="radio" name="age" value=">49"> > 49</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="profession_get">Profession:</label>
+            <input type="text" id="profession_get" name="profession">
+        </div>
+
+        <div>
+            <label for="country_get">Country:</label>
+            <select id="country_get" name="countries[]" multiple size="4">
+                <option value="vietnam">Vietnam</option>
+                <option value="usa">USA</option>
+                <option value="japan">Japan</option>
+                <option value="germany">Germany</option>
+                <option value="australia">Australia</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="discovery_get">How did the user found out about the site (larger text field):</label>
+            <textarea id="discovery_get" name="discovery" rows="5"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit bằng GET">
+        </div>
+    </form>
+
+    <hr> <form action="" method="post">
+        <h2>Task 4 - Thử nghiệm với POST</h2>
+        
+        <div>
+            <label for="name_post">Name:</label>
+            <input type="text" id="name_post" name="username" required>
+        </div>
+
+        <div>
+            <label>Age:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="age" value="<18"> < 18</label>
+                <label><input type="radio" name="age" value="19-35" checked> 19-35</label>
+                <label><input type="radio" name="age" value="36-48"> 36-48</label>
+                <label><input type="radio" name="age" value=">49"> > 49</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="profession_post">Profession:</label>
+            <input type="text" id="profession_post" name="profession">
+        </div>
+
+        <div>
+            <label for="country_post">Country:</label>
+<select id="country_post" name="countries[]" multiple size="4">
+                <option value="vietnam">Vietnam</option>
+                <option value="usa">USA</option>
+                <option value="japan">Japan</option>
+                <option value="germany">Germany</option>
+                <option value="australia">Australia</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="discovery_post">How did the user found out about the site (larger text field):</label>
+            <textarea id="discovery_post" name="discovery" rows="5"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit bằng POST">
+        </div>
+    </form>
+
+</body>
+</html>

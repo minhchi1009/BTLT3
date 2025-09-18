@@ -1,0 +1,117 @@
+/* Thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Nền xám nhạt bên ngoài */
+}
+
+/* 1. Thẻ chứa toàn bộ trang */
+.container {
+    width: 80%; /* Chiếm 80% chiều rộng trang */
+    max-width: 900px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Tự động căn giữa */
+    border: 1px solid #000; /* Đường viền đen xung quanh */
+    padding: 20px;
+    background-color: #fff; /* Nền trắng bên trong */
+}
+
+/* Tiêu đề "Home page" (hiện đã ở ngoài container) */
+h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px; /* Thêm khoảng cách với container bên dưới */
+}
+
+/* 2. Header (Chứa logo) */
+/* Thêm flex để căn giữa khối logo */
+.site-header {
+    display: flex;
+    justify-content: center;
+}
+
+/* Khối logo (Hình + Chữ) */
+.site-header .logo {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    /* Xếp logo và chữ nằm ngang */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa logo và chữ */
+}
+
+/* 3. Thanh điều hướng */
+.main-nav {
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    display: flex; /* Xếp các mục menu nằm ngang */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* Khoảng cách giữa các mục menu */ 
+    /*Căn giữa các mục menu */
+    justify-content: center;
+}
+
+.main-nav ul li a {
+    text-decoration: underline;
+    color: #000;
+    font-size: 1em;
+}
+
+/* 4. Vùng nội dung chính (2 cột) */
+.main-content {
+    display: flex; /* Sử dụng Flexbox để tạo 2 cột */
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Cột bên trái: News */
+.news-column {
+    flex: 1; /* Chiếm 1 nửa không gian */
+    padding-right: 20px;
+    /* Đường kẻ dọc ngăn cách 2 cột */
+    border-right: 2px solid #000; 
+    text-align: center;
+}
+
+/* Cột bên phải: Announcements */
+.announcements-column {
+    flex: 1; /* Chiếm 1 nửa không gian */
+    padding-left: 20px;
+    text-align: center;
+}
+
+/* Tiêu đề của 2 cột (News, Announcements) */
+.main-content h2 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+/* Tiêu đề của các mục tin (News 1, Open course 1) */
+.main-content h3 {
+    font-size: 1em;
+    font-weight: normal; /* Không in đậm */
+    margin-bottom: 5px;
+}
+
+.main-content p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* 5. Footer (Thông tin liên hệ) */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    /* Đã xóa border-top */
+    font-size: 0.9em;
+    line-height: 1.4; 
+}
+
+footer p {
+    margin: 5px 0; /* Khoảng cách giữa 2 dòng footer */
+}
